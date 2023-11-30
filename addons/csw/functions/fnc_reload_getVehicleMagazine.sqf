@@ -4,7 +4,7 @@
  * Finds the best vehicle magazines to create from a carryable magazine for a given weapon.
  *
  * Arguments:
- * 0: Vehicle <OBJECT>
+ * 0: CSW <OBJECT>
  * 1: Turret <ARRAY>
  * 2: Magazine that is carryable <STRING>
  *
@@ -28,7 +28,6 @@ private _bestMag = "#";
 private _bestMagCount = -1;
 
 {
-    private _weapon = _x;
     {
         if ((getNumber (_carryGroupCfg >> _x)) == 1) then {
             private _xAmmo = getNumber (configFile >> "CfgMagazines" >> _x >> "ammo");
@@ -37,7 +36,7 @@ private _bestMagCount = -1;
                 _bestMagCount = _xAmmo;
             };
         };
-    } forEach (getArray (configFile >> "CfgWeapons" >> _weapon >> "magazines"));
+    } forEach (GVAR(compatibleVehicleMagsCache) get _x);
 } forEach (_vehicle weaponsTurret _turret);
 TRACE_3("best fit",_desiredAmmo,_bestMag,_bestMagCount);
 

@@ -10,6 +10,8 @@ PREP_RECOMPILE_END;
 
 GVAR(initializedStaticTypes) = [];
 GVAR(initializedVehicleTypes) = [];
+GVAR(vehicleMagCache) = createHashMap;
+GVAR(compatibleMagsCache) = createHashMap;
+GVAR(compatibleVehicleMagsCache) = createHashMap;
 
 ADDON = true;
-
