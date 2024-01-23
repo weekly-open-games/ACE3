@@ -46,11 +46,10 @@ if (hasInterface && {!(_typeOf in GVAR(initializedVehicleTypes))}) then {
     TRACE_1("Adding Actions",_typeOf);
 
     private _ammoActionPath = [];
-    private _magazineLocation = getText (_configOf >> QUOTE(ADDON) >> "magazineLocation");
     private _condition = { //IGNORE_PRIVATE_WARNING ["_target", "_player"];
         // If magazine handling is enabled or weapon assembly/disassembly is enabled we enable ammo handling
         if ((GVAR(ammoHandling) == 0) && {!([false, true, true, GVAR(defaultAssemblyMode)] select (_target getVariable [QGVAR(assemblyMode), 3]))}) exitWith { false };
-        [_player, _target, ["isNotSwimming", "isNotSitting"]] call EFUNC(common,canInteractWith) && 
+        [_player, _target, ["isNotSwimming", "isNotSitting"]] call EFUNC(common,canInteractWith) &&
         {[_player] call CBA_fnc_vehicleRole == "gunner" || [_player] call CBA_fnc_vehicleRole == "commander"}
     };
     private _childenCode = {
@@ -60,17 +59,8 @@ if (hasInterface && {!(_typeOf in GVAR(initializedVehicleTypes))}) then {
         _ret
     };
 
-    if (_enableAmmoHandling) then {
-        //if (_configEnabled) then {
-            private _ammoAction = [QGVAR(magazine), localize LSTRING(AmmoHandling_displayName), "", {}, _condition, _childenCode,[_turretsAffected]] call EFUNC(interact_menu,createAction);
-            _ammoActionPath = [_typeOf, 1, [""], _ammoAction] call EFUNC(interact_menu,addActionToClass);
-        //};
-    };
-
-    if (["ace_reload"] call EFUNC(common,isModLoaded)) then {
-        // move reload's check ammo action to the ammo handling point (remove and re-add)
-        [_typeOf, 1, ["ACE_SelfActions", QEGVAR(reload,CheckAmmo)]] call EFUNC(interact_menu,removeActionFromClass);
-        private _checkAmmoAction = [QGVAR(checkAmmo), localize ELSTRING(reload,checkAmmo), "", EFUNC(reload,checkAmmo), EFUNC(reload,canCheckAmmo)] call EFUNC(interact_menu,createAction);
-        [_typeOf, 1, _ammoActionPath, _checkAmmoAction] call EFUNC(interact_menu,addActionToClass);
+    if (_configEnabled) then {
+        private _ammoAction = [QGVAR(magazine), localize LSTRING(AmmoHandling_displayName), "", {}, _condition, _childenCode,[_turretsAffected]] call EFUNC(interact_menu,createAction);
+        _ammoActionPath = [_typeOf, 1, ["ACE_SelfActions"], _ammoAction] call EFUNC(interact_menu,addActionToClass);
     };
 };
