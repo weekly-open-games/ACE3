@@ -18,7 +18,6 @@
 
 params ["_vehicle", "_turret"];
 TRACE_2("vehiclesInit_unloadExtraMags",_vehicle,_turret);
-if (!alive _vehicle) exitWith {TRACE_1("dead/deleted",alive _vehicle);};
 
 private _emptyWeapon = _vehicle getVariable [QGVAR(emptyWeapon), false];
 TRACE_1("",_emptyWeapon);
@@ -68,14 +67,13 @@ private _containerMagazineCount = [];
 
 
 TRACE_1("Remove all loaded magazines",_magsToRemove);
-{ 
+{
     _vehicle removeMagazinesTurret _x;
+    if ((_loadedMagazineInfo select [0,2]) isEqualTo _x) then {
+        TRACE_1("Re-add the starting mag",_loadedMagazineInfo);
+        _vehicle addMagazineTurret _loadedMagazineInfo;
+    };
 } forEach _magsToRemove;
-
-TRACE_1("Re-add the starting mag",_loadedMagazineInfo);
-if (!(_loadedMagazineInfo isEqualTo [])) then {
-    _vehicle addMagazineTurret _loadedMagazineInfo;
-};
 
 if (_storeExtraMagazines) then {
     TRACE_1("saving extra mags to container",_containerMagazineCount);
