@@ -106,8 +106,7 @@ if (
 };
 
 if (
-    !alive _vehicle &&
-    {_vehicle != _unit} && {!(_vehicle isKindOf "StaticWeapon")}
+    !alive _vehicle && _inVehicle && {!(_vehicle isKindOf "StaticWeapon")}
 ) exitWith {
    
     private _damages = [];
