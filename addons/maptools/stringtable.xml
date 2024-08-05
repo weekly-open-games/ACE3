@@ -476,11 +476,11 @@
         </Key>
         <Key ID="STR_ACE_MapTools_DrawRadius">
             <English>Draw radius</English>
-            <Russian>Отрисовать по радиусу</Russian>			
+            <Russian>Отрисовать по радиусу</Russian>
         </Key>
         <Key ID="STR_ACE_MapTools_InvalidRadius">
             <English>Invalid radius</English>
-            <Russian>Некорректный радиус</Russian>				
+            <Russian>Некорректный радиус</Russian>
         </Key>
         <Key ID="STR_ACE_MapTools_Cancel">
             <English>Cancel</English>
@@ -498,6 +498,6 @@
             <Chinesesimp>取消</Chinesesimp>
             <Chinese>取消</Chinese>
             <Turkish>Iptal</Turkish>
-        </Key>	
+        </Key>
     </Package>
 </Project>
