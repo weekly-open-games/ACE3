@@ -18,9 +18,8 @@ class CfgWeapons {
         displayName = CSTRING(dragonNameCarry); // add [CSW] prefix to make it clearer in arsenal that this is a deployable weapon
         descriptionShort = CSTRING(dragonDescription);
         scope = 2;
-        shotPos = "muzzlePos2";
-        shotEnd = "muzzleEnd2";
-        class ACE_CSW {
+
+        class ace_csw {
             type = "mount";
             deployTime = 2;
             pickupTime = 2;
@@ -76,7 +75,7 @@ class CfgWeapons {
         opticsZoomMin = 0.0415;
         opticsZoomMax = 0.0415;
         scope = 2;
-        class ACE_CSW {
+        class ace_csw {
             type = "weapon";
             deployTime = 2;
             pickupTime = 1;
