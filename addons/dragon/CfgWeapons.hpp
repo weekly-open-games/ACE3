@@ -18,7 +18,9 @@ class CfgWeapons {
         displayName = CSTRING(dragonNameCarry); // add [CSW] prefix to make it clearer in arsenal that this is a deployable weapon
         descriptionShort = CSTRING(dragonDescription);
         scope = 2;
-
+        shotPos = "muzzlePos2";
+        shotEnd = "muzzleEnd2";
+        
         class ace_csw {
             type = "mount";
             deployTime = 2;

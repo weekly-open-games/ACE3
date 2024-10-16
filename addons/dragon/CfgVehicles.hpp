@@ -115,7 +115,7 @@ class CfgVehicles {
         armorStructural = 10.0;
 
         class ace_csw {
-            disassembleTo = QGVAR(super);
+            disassembleTo = "ACE_M47_Dragon";
         };
 
         class ACE_Actions: ACE_Actions {
