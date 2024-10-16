@@ -13,11 +13,13 @@ call FUNC(parseConfigForInjuries);
 // Used for armor penetration calculation
 GVAR(ammoCache) = createHashMap;
 
+/*
 addMissionEventHandler ["Loaded",{
     INFO("Mission Loaded - Reloading medical configs for extension");
     // Reload configs into extension (handle full game restart)
     call FUNC(parseConfigForInjuries);
 }];
+*/
 
 [QEGVAR(medical,woundReceived), LINKFUNC(woundReceived)] call CBA_fnc_addEventHandler;
 
