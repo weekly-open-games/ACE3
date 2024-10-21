@@ -4,6 +4,7 @@ on:
   push:
     branches:
     - master
+    - wog-release
   pull_request_target:
 
 jobs:
@@ -42,3 +43,4 @@ jobs:
       with:
         name: ace3-${{ github.sha }}
         path: .hemttout/@*
+        include-hidden-files: true # Because .hemttout is a hidden directory
