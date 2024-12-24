@@ -79,7 +79,7 @@ _magazine params ["_magazineClassname", "_ammoCount", "_spawnProjectile", "_maga
 _ammoCount = _ammoCount max 0;
 
 // Remove some ammo, which will be detonated
-private _removed = _ammoCount min floor (1 + random (6 / GVAR(ammoCookoffDuration)));
+private _removed = (_ammoCount min floor (1 + random (6 / GVAR(ammoCookoffDuration)))) * 1.6;
 private _newAmmoCount = _ammoCount - _removed;
 
 // Remove ammo from magazines if enabled
