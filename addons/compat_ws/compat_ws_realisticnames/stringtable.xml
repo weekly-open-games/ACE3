@@ -195,6 +195,7 @@
             <English>Vektor SS-77</English>
             <French>Vektor SS-77</French>
             <Spanish>Vektor SS-77</Spanish>
+            <Italian>Vektor SS-77</Italian>
             <Russian>Vektor SS-77</Russian>
             <German>Vektor SS-77</German>
             <Korean>벡터 SS-77</Korean>
@@ -353,12 +354,14 @@
             <Chinesesimp>XMS GL</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_GL_Camo_Name">
-            <English>XMS GL (Camo)</English>
-            <Japanese>XMS GL (迷彩)</Japanese>
-            <Korean>XMS GL (위장)</Korean>
+            <English>XMS GL (Stripes)</English>
+            <Italian>XMS GL (Strisce)</Italian>
+            <Japanese>XMS GL (縞模様迷彩)</Japanese>
+            <Korean>XMS GL (줄무늬 위장)</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_GL_Gray_Name">
             <English>XMS GL (Gray)</English>
+            <Italian>XMS GL (Grigio)</Italian>
             <Japanese>XMS GL (グレー)</Japanese>
             <Korean>XMS GL (회색)</Korean>
         </Key>
@@ -399,12 +402,14 @@
             <Chinesesimp>XMS</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_Camo_Name">
-            <English>XMS (Camo)</English>
-            <Japanese>XMS (迷彩)</Japanese>
-            <Korean>XMS (위장)</Korean>
+            <English>XMS (Stripes)</English>
+            <Italian>XMS (Strisce)</Italian>
+            <Japanese>XMS (縞模様迷彩)</Japanese>
+            <Korean>XMS (줄무늬 위장)</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_Gray_Name">
             <English>XMS (Gray)</English>
+            <Italian>XMS (Grigio)</Italian>
             <Japanese>XMS (グレー)</Japanese>
             <Korean>XMS (회색)</Korean>
         </Key>
@@ -433,12 +438,14 @@
             <Chinesesimp>XMS SG</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_SG_Camo_Name">
-            <English>XMS SG (Camo)</English>
-            <Japanese>XMS SG (迷彩)</Japanese>
-            <Korean>XMS SG (위장)</Korean>
+            <English>XMS SG (Stripes)</English>
+            <Italian>XMS SG (Strisce)</Italian>
+            <Japanese>XMS SG (縞模様迷彩)</Japanese>
+            <Korean>XMS SG (줄무늬 위장)</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_SG_Gray_Name">
             <English>XMS SG (Gray)</English>
+            <Italian>XMS SG (Grigio)</Italian>
             <Japanese>XMS SG (グレー)</Japanese>
             <Korean>XMS SG (회색)</Korean>
         </Key>
@@ -479,12 +486,14 @@
             <Chinesesimp>XMS SW</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_SW_Camo_Name">
-            <English>XMS SW (Camo)</English>
-            <Japanese>XMS SW (迷彩)</Japanese>
-            <Korean>XMS SW (위장)</Korean>
+            <English>XMS SW (Stripes)</English>
+            <Italian>XMS SW (Strisce)</Italian>
+            <Japanese>XMS SW (縞模様迷彩)</Japanese>
+            <Korean>XMS SW (줄무늬 위장)</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_SW_Gray_Name">
             <English>XMS SW (Gray)</English>
+            <Italian>XMS SW (Grigio)</Italian>
             <Japanese>XMS SW (グレー)</Japanese>
             <Korean>XMS SW (회색)</Korean>
         </Key>
@@ -567,14 +576,16 @@
             <Japanese>オトカ アルマ (非武装)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_aco_camo_Name">
-            <English>C-More Railway (Red, Camo)</English>
-            <Japanese>C-More レイルウェイ (レッド、迷彩)</Japanese>
-            <Korean>씨모어 레일웨이 (빨강/위장)</Korean>
+            <English>C-More Railway (Red, Stripes)</English>
+            <Italian>C-More Railway (Rosso, Strisce)</Italian>
+            <Japanese>C-More レイルウェイ (レッド、縞模様迷彩)</Japanese>
+            <Korean>씨모어 레일웨이 (빨강/줄무늬 위장)</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_aco_grn_camo_Name">
-            <English>C-More Railway (Green, Camo)</English>
-            <Japanese>C-More レイルウェイ (グリーン、迷彩)</Japanese>
-            <Korean>씨모어 레일웨이 (초록/위장)</Korean>
+            <English>C-More Railway (Green, Stripes)</English>
+            <Italian>C-More Railway (Verde, Strisce)</Italian>
+            <Japanese>C-More レイルウェイ (グリーン、縞模様迷彩)</Japanese>
+            <Korean>씨모어 레일웨이 (초록/줄무늬 위장)</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_arco_hex_Name">
             <English>ELCAN SpecterOS (Hex)</English>
