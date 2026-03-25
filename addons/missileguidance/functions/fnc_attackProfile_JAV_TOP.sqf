@@ -23,7 +23,7 @@
 #define STAGE_TERMINAL 4
 
 #define CRUISE_ALT 160
-#define CLIMB_ANGLE 71
+#define CLIMB_ANGLE 25
 #define ATTACK_ANGLE 45
 
 params ["_seekerTargetPos", "_args", "_attackProfileStateParams"];
@@ -59,7 +59,7 @@ switch( (_attackProfileStateParams select 0) ) do {
     case STAGE_LAUNCH: {
         TRACE_1("STAGE_LAUNCH","");
         if (_distanceToShooter < 10) then {
-            _returnTargetPos = _seekerTargetPos vectorAdd [0,0,5];
+            _returnTargetPos = _seekerTargetPos vectorAdd [0,0,15];
         } else {
             _attackProfileStateParams set [0, STAGE_CLIMB];
         };
@@ -67,11 +67,13 @@ switch( (_attackProfileStateParams select 0) ) do {
     case STAGE_CLIMB: {
         TRACE_1("STAGE_CLIMB","");
         private _altitude = (ASLToAGL _projectilePos) select 2;
+        private _attackAngleReq = linearConversion [40, 140, _altitude, 20, 40, true];
+
         switch (true) do {
             case (_altitude >= CRUISE_ALT): {
                 _attackProfileStateParams set [0, STAGE_COAST];
             };
-            case (_attackAngle >= ATTACK_ANGLE): {
+            case (_attackAngle >= _attackAngleReq): {
                 _attackProfileStateParams set [0, STAGE_TERMINAL];
             };
             default {
