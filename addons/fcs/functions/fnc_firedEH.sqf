@@ -70,7 +70,7 @@ if (getNumber (configFile >> "CfgAmmo" >> _ammo >> QGVAR(Airburst)) == 1) then {
     private _zeroing = _vehicle getVariable [format ["%1_%2", QGVAR(Distance), _turret], currentZeroing _gunner];
 
     if (_zeroing < 50) exitWith {};
-    if (_zeroing > 1500) exitWith {};
+    if (_zeroing > 4500) exitWith {};
 
     [LINKFUNC(handleAirBurstAmmunitionPFH), 0, [_vehicle, _projectile, _zeroing]] call CBA_fnc_addPerFrameHandler;
 };
